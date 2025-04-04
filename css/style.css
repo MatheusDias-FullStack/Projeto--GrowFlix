@@ -9,6 +9,9 @@ body {
     border-radius: none;
     font-family: 'Nunito Sans', sans-serif;
   }
+#initial-container{
+    overflow-x: hidden;
+}
 .width-logo{
     height: 50px;
     width: 110px;

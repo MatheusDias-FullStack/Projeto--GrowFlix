@@ -4,6 +4,9 @@ body{
     margin: 0;
     color: white;
 }
+#id-first{
+    overflow-x: hidden;
+}
 .width-logo{
     height: 50px;
     width: 110px;
@@ -133,7 +136,13 @@ main > .row{
         margin: auto;
         padding: auto;
     }
-    
+    #id-first{
+        overflow-x: hidden;
+    }
+    .ul-ms{
+        padding-left: 0;
+        width: 50%;
+    }
 }
 
 .iframe-container {
