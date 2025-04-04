@@ -24,7 +24,7 @@ body{
     color: white;
 }
 #initial-img{
-    background-image: url("./assets/image/growcast-01.png");
+    background-image: url("../assets/image/growcast-01.png");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
