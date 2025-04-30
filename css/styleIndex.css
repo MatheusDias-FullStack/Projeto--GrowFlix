@@ -31,6 +31,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+
     
 }
 
@@ -124,27 +125,6 @@ main > .row{
 .footer-font-diferent{
     font-size: 14px;
 }
-@media screen and (max-width: 550px){
-    .div-img > img{
-        min-width: 400px;
-    }
-    .div-img:hover > a{
-        max-width: 250px;
-        
-    }
-    main > .row{
-        margin: auto;
-        padding: auto;
-    }
-    #id-first{
-        overflow-x: hidden;
-    }
-    .ul-ms{
-        padding-left: 0;
-        width: 50%;
-    }
-}
-
 .iframe-container {
     position: fixed;
     top: 0;
@@ -153,9 +133,7 @@ main > .row{
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    overflow: scroll;
-    
-     
+    overflow: scroll;     
 }
 
 .close-btn {
@@ -199,21 +177,227 @@ main > .row{
 .div-button{
     position: absolute;
     right: 0;
-    z-index: 3;
-    
-    
+    z-index: 3; 
 }
-@media screen and (max-width:550px){
+
+@media screen and (max-width: 550px){
+    .div-img > img{
+        min-width: 400px;
+    }
+    .div-img:hover > a{
+        max-width: 250px;
+        
+    }
+    main > .row{
+        margin: auto;
+        padding: auto;
+    }
+    #id-first{
+        overflow-x: hidden;
+    }
+    .ul-ms{
+        padding-left: 0;
+        width: 50%;
+    }
     .iframe-container{
-        min-height: 600px;
+        min-height: 250px;
+
     }
     .iframe{
         height: 100vh;
         max-height: 50vh;
         min-height: 250px;
+        min-width: 170px;
+    }
+    #list-button {
+        position: relative;
+        width: 100%; 
+        height: 100px; 
     }
     
-}
+    .positioned-button {
+        position: absolute;
+        top: 8px; 
+        right: 25px; 
+    }
+    .style-list{
+        display: none;
+    }
+    .btn-secondary{
+        --bs-btn-bg: rgba(0, 0, 0, 0);
+
+        --bs-btn-color: grey;
+        --bs-btn-border-color: #6c757d;
+        --bs-btn-hover-color: grey;
+        --bs-btn-hover-bg: rgba(0,0,0,0);
+        --bs-btn-hover-border-color: none;
+        --bs-btn-focus-shadow-rgb: none;
+        --bs-btn-active-color: grey;
+        --bs-btn-active-bg: rgba(0,0,0,0);
+        --bs-btn-active-border-color: grey;
+        --bs-btn-active-shadow: none;
+        --bs-btn-disabled-color: none;
+        --bs-btn-disabled-bg: none;
+        --bs-btn-disabled-border-color: none;
+    }
+    #img-ms {
+        position: relative;
+        width: 100%; 
+        height: 100px; 
+        
+    }
+    .positioned-img {
+        position: absolute;
+        top: -99px; 
+        left: 30px;
+        
+    }
+    .list-position{
+        left: 30px;
+        top: 50px
+    }
+    .list-position > ul{
+        list-style-type: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .list-position > ul > li > a{
+        text-decoration: none;
+        color: white;
+    }
+    .list-position > ul > li {
+        padding-bottom: 14px;
+    }
+    .color-initial-item li:nth-child(1) > a {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(2) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(3) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(4) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(5) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(2) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(3) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(4) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(5) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .to-appear {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      .to-appear li {
+        opacity: 0;
+        transform: translateY(0px);
+        animation: listening 0.35s forwards;
+        font-size: 14px;
+      }
+      
+      .to-appear li:nth-child(1) {
+        animation-delay: 0.07s;
+      }
+      
+      .to-appear li:nth-child(2) {
+        animation-delay: 0.14s;
+        
+      }
+      
+      .to-appear li:nth-child(3) {
+        animation-delay: 0.21s;
+      }
+      
+      .to-appear li:nth-child(4) {
+        animation-delay: 0.28s;
+      }
+      
+      .to-appear li:nth-child(5) {
+        animation-delay: 0.35s;
+      }
+      
+      @keyframes listening {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .to-disappear {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        opacity: 1; /* Tornar os elementos inicialmente visíveis */
+        visibility: visible;
+        font-size: 14px;
+      }
+      
+      .to-disappear li {
+        opacity: 1;
+        transform: translateY(0); /* Começa na posição original */
+        animation: fadeOutUp 0.35s forwards; /* Usando a nova animação */
+      }
+      
+      .to-disappear li:nth-child(1) {
+        animation-delay: 0.35s;
+      }
+      
+      .to-disappear li:nth-child(2) {
+        animation-delay: 0.28s;
+      }
+      
+      .to-disappear li:nth-child(3) {
+        animation-delay: 0.21s;
+      }
+      
+      .to-disappear li:nth-child(4) {
+        animation-delay: 0.14s;
+      }
+      
+      .to-disappear li:nth-child(5) {
+        animation-delay: 0.07s;
+      }
+      
+      @keyframes fadeOutUp {
+        from{
+            opacity: 1;
+            transform: translateY(0) ;
+        }
+        to {
+          opacity: 0; /* Desaparece */
+          transform: translateY(0px); /* Move para cima */
+        }
+      }
+      
+      
+      body.zoomed {
+        display: block;
+        transform: scale(1.05);
+        transition: transform 0.35s linear;
+        overflow-x: hidden;
+      }
+      body.reverse{
+        transform: scale(1);
+        transition: transform 0.35s linear;
+        overflow-x: hidden;
+      }
+    }
+      
+
 @media screen and (min-width: 550px) and (max-width:767px){
     .iframe-container{
         min-height: 600px;
@@ -221,11 +405,209 @@ main > .row{
     .iframe{
         
         height: 100vh;
-        max-height: 60vh;
+        max-height: 70vh;
         min-height: 250px;
     }
     .ul-ms{
         width: 25%;
+    }
+   
+    
+}
+@media screen and (min-width: 550px) and (max-width:880px){
+    #list-button {
+        position: relative;
+        width: 100%; 
+        height: 100px; 
+    }
+    
+    .positioned-button {
+        position: absolute;
+        top: 12px; 
+        right: 25px; 
+    }
+    .btn-secondary{
+        --bs-btn-bg: rgba(0, 0, 0, 0);
+
+        --bs-btn-color: grey;
+        --bs-btn-border-color: #6c757d;
+        --bs-btn-hover-color: grey;
+        --bs-btn-hover-bg: rgba(0,0,0,0);
+        --bs-btn-hover-border-color: none;
+        --bs-btn-focus-shadow-rgb: none;
+        --bs-btn-active-color: grey;
+        --bs-btn-active-bg: rgba(0,0,0,0);
+        --bs-btn-active-border-color: grey;
+        --bs-btn-active-shadow: none;
+        --bs-btn-disabled-color: none;
+        --bs-btn-disabled-bg: none;
+        --bs-btn-disabled-border-color: none;
+    }
+    .style-list{
+        display: none;
+    }
+    #img-ms {
+        position: relative;
+        width: 100%; 
+        height: 100px; 
+        
+    }
+    .positioned-img {
+        position: absolute;
+        top: -99px; 
+        left: 30px;
+        
+    }
+    .list-position{
+        left: 30px;
+        top: 50px
+    }
+    .list-position > ul{
+        list-style-type: none;
+    }
+    .list-position > ul > li > a{
+        text-decoration: none;
+        color: white;
+    }
+    .list-position > ul > li {
+        padding-bottom: 14px;
+    }
+    .color-initial-item li:nth-child(1) > a {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(2) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(3) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(4) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(5) > a {
+        color: rgba(255, 255, 255, 0.6)
+    }
+    .color-initial-item li:nth-child(2) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(3) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(4) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .color-initial-item li:nth-child(5) > a:hover {
+        color: rgba(255, 255, 255, 1)
+    }
+    .to-appear {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      .to-appear li {
+        opacity: 0;
+        transform: translateY(0px);
+        animation: listening 0.35s forwards;
+        font-size: 14px;
+      }
+      
+      .to-appear li:nth-child(1) {
+        animation-delay: 0.07s;
+      }
+      
+      .to-appear li:nth-child(2) {
+        animation-delay: 0.14s;
+        
+      }
+      
+      .to-appear li:nth-child(3) {
+        animation-delay: 0.21s;
+      }
+      
+      .to-appear li:nth-child(4) {
+        animation-delay: 0.28s;
+      }
+      
+      .to-appear li:nth-child(5) {
+        animation-delay: 0.35s;
+      }
+      
+      @keyframes listening {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .to-disappear {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        opacity: 1; 
+        visibility: visible;
+        font-size: 14px;
+      }
+      
+      .to-disappear li {
+        opacity: 1;
+        transform: translateY(0); 
+        animation: fadeOutUp 0.35s forwards; 
+      }
+      
+      .to-disappear li:nth-child(1) {
+        animation-delay: 0.35s;
+      }
+      
+      .to-disappear li:nth-child(2) {
+        animation-delay: 0.28s;
+      }
+      
+      .to-disappear li:nth-child(3) {
+        animation-delay: 0.21s;
+      }
+      
+      .to-disappear li:nth-child(4) {
+        animation-delay: 0.14s;
+      }
+      
+      .to-disappear li:nth-child(5) {
+        animation-delay: 0.07s;
+      }
+      
+      @keyframes fadeOutUp {
+        from{
+            opacity: 1;
+            transform: translateY(0) ;
+        }
+        to {
+          opacity: 0; /* Desaparece */
+          transform: translateY(0px); /* Move para cima */
+          visibility: hidden;
+        }
+      }
+      
+      
+      body.zoomed {
+        display: block;
+        transform: scale(1.05);
+        transition: transform 0.35s linear;
+        overflow-x: hidden;
+      }
+      body.reverse{
+        transform: scale(1);
+        transition: transform 0.35s linear;
+        overflow-x: hidden;
+      }
+    
+}
+@media screen and (min-width: 880px){
+    #list-button{
+        display: none;
+    }
+    #img-ms{
+        display: none;
     }
 }
 @media screen and (min-width: 767px)and (max-width:991px){
