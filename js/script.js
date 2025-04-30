@@ -63,7 +63,7 @@ function logoMs(){
     const img = document.createElement('img')
     const anchor = document.createElement('a')
     anchor.href = "./index.html" 
-    img.src = "../assets/image/logo-growflix.svg" 
+    img.src = "./assets/image/logo-growflix.svg" 
     img.alt = "logo"
     img.style.height= '50px'
     img.style.width = '110px'
